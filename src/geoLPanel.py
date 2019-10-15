@@ -13,6 +13,8 @@
 import wx
 import geoLGobal as gv
 
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
 class PanelMap(wx.Panel):
     """ Map panel to show the google map."""
     def __init__(self, parent):
@@ -22,6 +24,7 @@ class PanelMap(wx.Panel):
         self.Bind(wx.EVT_PAINT, self.onPaint)
         self.SetDoubleBuffered(True)
 
+#-----------------------------------------------------------------------------
     def onPaint(self, evt):
         """ Draw the bitmap and the lines."""
         dc = wx.PaintDC(self)
@@ -31,7 +34,7 @@ class PanelMap(wx.Panel):
         dc.DrawLine(384-l, 256, 384+l, 256)
         dc.DrawLine(384, 256-l, 384, 256+l)
 
-    
+#-----------------------------------------------------------------------------
     def scale_bitmap(self, bitmap, width, height):
         """ resize the bitmap """
         image = wx.ImageFromBitmap(bitmap)
@@ -39,9 +42,11 @@ class PanelMap(wx.Panel):
         result = wx.BitmapFromImage(image)
         return result
 
+#-----------------------------------------------------------------------------
     def updateBitmap(self, bitMap):
         self.bmp = bitMap
 
+#-----------------------------------------------------------------------------
     def updateDisplay(self, updateFlag=None):
         """ Set/Update the display: if called as updateDisplay() the function will 
             update the panel, if called as updateDisplay(updateFlag=?) the function will 
