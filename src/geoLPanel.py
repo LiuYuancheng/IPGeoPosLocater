@@ -26,6 +26,11 @@ class PanelMap(wx.Panel):
         """ Draw the bitmap and the lines."""
         dc = wx.PaintDC(self)
         dc.DrawBitmap(self.scale_bitmap(self.bmp, 768, 512), 0, 0)
+        dc.SetPen(wx.Pen('RED', width=2, style=wx.PENSTYLE_SOLID))
+        l = 8
+        dc.DrawLine(384-l, 256, 384+l, 256)
+        dc.DrawLine(384, 256-l, 384, 256+l)
+
     
     def scale_bitmap(self, bitmap, width, height):
         """ resize the bitmap """

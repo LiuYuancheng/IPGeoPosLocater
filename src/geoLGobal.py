@@ -16,7 +16,7 @@ import os
 
 dirpath = os.getcwd()
 print("Current working directory is : %s" %dirpath)
-APP_NAME = 'Web GeoLocaion Finder'
+APP_NAME = 'Web GeoLocation Finder'
 
 
 #------<IMAGES PATH>-------------------------------------------------------------

@@ -21,9 +21,9 @@ from urllib.request import urlopen
 from json import load
 from PIL import Image, ImageDraw
 
+import wx  # use wx to build the UI.
 import webbrowser
 
-import wx  # use wx to build the UI.
 import geoLGobal as gv
 import geoLPanel as gp
 
@@ -34,28 +34,37 @@ class geoLFrame(wx.Frame):
     """ DJI tello drone system control hub."""
     def __init__(self, parent, id, title):
         """ Init the UI and parameters """
-        wx.Frame.__init__(self, parent, id, title, size=(1200, 620))
+        wx.Frame.__init__(self, parent, id, title, size=(1150, 560))
         self.SetBackgroundColour(wx.Colour(200, 210, 200))
+        self.scIPaddr = ''      # url ip address
+        self.gpsPos = [0, 0]    # url gps position
         self.SetSizer(self._buidUISizer())
-        self.scIPaddr = ''
-        self.gpsPos = [0, 0]
 
+#-----------------------------------------------------------------------------
     def _buidUISizer(self):
-        """ Build the UI Sizer. """
+        """ Build the main UI Sizer. """
         flagsR = wx.RIGHT | wx.ALIGN_CENTER_VERTICAL
         mSizer = wx.BoxSizer(wx.HORIZONTAL)
+        mSizer.AddSpacer(5)
         gv.iMapPanel = self.mapPanel = gp.PanelMap(self)
         mSizer.Add(self.mapPanel, flag=flagsR, border=2)
+        mSizer.AddSpacer(5)
+        mSizer.Add(wx.StaticLine(self, wx.ID_ANY, size=(-1, 560),
+                                 style=wx.LI_VERTICAL), flag=flagsR, border=2)
+        mSizer.AddSpacer(5)
         ctSizer = self._buildCtrlSizer()
         mSizer.Add(ctSizer)
         return mSizer
 
+#-----------------------------------------------------------------------------
     def _buildCtrlSizer(self):
         flagsR = wx.RIGHT | wx.ALIGN_CENTER_VERTICAL
         ctSizer = wx.BoxSizer(wx.VERTICAL)
         hbox0 = wx.BoxSizer(wx.HORIZONTAL)
+        ctSizer.AddSpacer(5)
         hbox0.Add(wx.StaticText(self, label="Search key:".ljust(20)), flag=flagsR, border=2)
         self.scKeyCB = wx.ComboBox(self, -1, choices=['IP', 'URL'],size=(60, 22), style=wx.CB_READONLY)
+        self.scKeyCB.SetSelection(0)
         hbox0.Add(self.scKeyCB, flag=flagsR, border=2)
         hbox0.AddSpacer(10)
         hbox0.Add(wx.StaticText(self, label="Map ZoomIn Level".ljust(20)), flag=flagsR, border=2)
@@ -69,12 +78,10 @@ class geoLFrame(wx.Frame):
         hbox1.Add(wx.StaticText(self, label="IP/URL: "), flag=flagsR, border=2)
         self.scValTC = wx.TextCtrl(self, size = (230,22) )
         hbox1.Add(self.scValTC, flag=flagsR, border=2)
-        hbox1.AddSpacer(5)
+        hbox1.AddSpacer(2)
         self.searchBt = wx.Button(self, label='Search', size=(60, 22))
         self.searchBt.Bind(wx.EVT_BUTTON, self.onSearch)
         hbox1.Add(self.searchBt, flag=flagsR, border=2)
-
-
         ctSizer.Add(hbox1, flag=flagsR, border=2)
 
         ctSizer.AddSpacer(5)
