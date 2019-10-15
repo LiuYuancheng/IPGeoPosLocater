@@ -13,10 +13,15 @@
 
 import os
 
+
 dirpath = os.getcwd()
 print("Current working directory is : %s" %dirpath)
 APP_NAME = 'Web GeoLocaion Finder'
 
+
+#------<IMAGES PATH>-------------------------------------------------------------
 BGIMG_PATH = "".join([dirpath, "\\img\\background.jpg"])
 
 
+#-------<GLOBAL PARAMTERS>-----------------------------------------------------
+iMapPanel = None

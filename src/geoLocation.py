@@ -179,8 +179,6 @@ im.save("test.png", "PNG")
 
 
 
-
-
 exit()
 # method 2
 response = urlopen('https://www.datacenterdynamics.com')
