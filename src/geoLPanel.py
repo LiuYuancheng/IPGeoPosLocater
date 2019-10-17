@@ -33,16 +33,19 @@ class PanelMap(wx.Panel):
         dc = wx.PaintDC(self)
         l, (w, h) = 8, self.panelSize  # set the bm size and the marker size.
         dc.DrawBitmap(self._scaleBitmap(self.bmp, w, h), 0, 0)
-        dc.SetPen(wx.Pen('RED', width=2, style=wx.PENSTYLE_SOLID))
-        dc.DrawLine(384-l, 256, 384+l, 256)
-        dc.DrawLine(384, 256-l, 384, 256+l)
+        dc.SetPen(wx.Pen('RED', width=1, style=wx.PENSTYLE_SOLID))
+        w, h = w//2, h//2
+        dc.DrawLine(w-l, h, w+l, h)
+        dc.DrawLine(w, h-l, w, h+l)
 
 #--PanelMap--------------------------------------------------------------------
     def _scaleBitmap(self, bitmap, width, height):
         """ Resize a input bitmap.(bitmap-> image -> resize image -> bitmap)"""
-        image = wx.ImageFromBitmap(bitmap)
+        #image = wx.ImageFromBitmap(bitmap) # used below 2.7
+        image = bitmap.ConvertToImage()
         image = image.Scale(width, height, wx.IMAGE_QUALITY_HIGH)
-        result = wx.BitmapFromImage(image)
+        #result = wx.BitmapFromImage(image) # used below 2.7
+        result = wx.Bitmap(image, depth=wx.BITMAP_SCREEN_DEPTH)
         return result
 
 #--PanelMap--------------------------------------------------------------------
@@ -70,7 +73,7 @@ class PanelCtrl(wx.Panel):
         self.gpsPos = None
         self.SetSizer(self._buidUISizer())
     
-#-----------------------------------------------------------------------------
+#--PanelCtrl-------------------------------------------------------------------
     def _buidUISizer(self):
         """ build the control panel sizer. """
         flagsR = wx.RIGHT | wx.ALIGN_CENTER_VERTICAL
@@ -95,7 +98,8 @@ class PanelCtrl(wx.Panel):
         ctSizer.AddSpacer(5)
         # Row idx 1: URL/IP fill in text field.
         hbox1 = wx.BoxSizer(wx.HORIZONTAL)
-        hbox1.Add(wx.StaticText(self, label="IP/URL : "), flag=flagsR, border=2)
+        hbox1.Add(wx.StaticText(self, label="IP/URL : "),
+                  flag=flagsR, border=2)
         self.scValTC = wx.TextCtrl(self, size=(220, 22))
         hbox1.Add(self.scValTC, flag=flagsR, border=2)
         hbox1.AddSpacer(2)
@@ -124,50 +128,52 @@ class PanelCtrl(wx.Panel):
         ctSizer.Add(hbox2, flag=flagsR, border=2)
         return ctSizer
 
-#-----------------------------------------------------------------------------
+#--PanelCtrl-------------------------------------------------------------------
     def onClear(self, event):
-        """ clear all the text field"""
+        """ Clear all the text field."""
         self.updateDetail(None)
 
-#-----------------------------------------------------------------------------
+#--PanelCtrl-------------------------------------------------------------------
     def onMark(self, event):
-        """ Creat the google map mark url and open the url by the system default browser.
+        """ Creat the google map gps position marked url and open the url by the 
+            system default browser.
         """
         url = "http://maps.google.com/maps?z=12&t=m&q=loc:" + \
             str(self.gpsPos[0])+"+"+str(self.gpsPos[1])
         webbrowser.open_new(url)
         webbrowser.get('chrome').open_new(url)
 
-#-----------------------------------------------------------------------------
+#--PanelCtrl-------------------------------------------------------------------
     def onSearch(self, event):
-        """ convert a url to the IP address then  find the GPS position of the 
-            IP address and draw it on the map.
+        """ Convert a url to the IP address, find the GPS position of the IP 
+            address and draw it on the map.
         """
-        self.updateDetail("----- %s -----" %str(datetime.today()))
+        self.updateDetail("----- %s -----" % str(datetime.today()))
         scIPaddr = val = self.scValTC.GetValue()
         # Convert the URL to ip address if needed.
         if self.scKeyCB.GetSelection():
-            url = str(val.split('//')[1]).split('/')[0] if 'http' in val else val.split('/')[0]
+            url = str(
+                val.split('//')[1]).split('/')[0] if 'http' in val else val.split('/')[0]
             self.updateDetail(url)
             scIPaddr = gv.iGeoMgr.urlToIp(url)
         if gv.iGeoMgr.checkIPValid(scIPaddr):
             self.updateDetail(scIPaddr)
         else:
-            print(" The IP address is invalid.")
+            self.updateDetail(" The IP address [%s] is invalid." %str(scIPaddr))
             return None
-        # get the gps pocition: 
+        # get the gps pocition:
         self.gpsPos = (lat, lon) = gv.iGeoMgr.getGpsPos(scIPaddr)
-        self.updateDetail('Server GPS position[%s]' %str((lat, lon)))
+        self.updateDetail('Server GPS position[%s]' % str((lat, lon)))
         # get the position google map and update the display
         bitmap = gv.iGeoMgr.PIL2wx(gv.iGeoMgr.getGoogleMap(lat, lon, 3, 2, 13))
         if gv.iMapPanel:
             gv.iMapPanel.updateBitmap(bitmap)
             gv.iMapPanel.updateDisplay()
-        self.updateDetail("----- Finished -----")
+        self.updateDetail("----- Finished ----- \n")
 
-#-----------------------------------------------------------------------------
+#--PanelCtrl-------------------------------------------------------------------
     def updateDetail(self, data):
-        """ update the data in the detail text field. input 'None' will clear the 
+        """ Update the data in the detail text field. Input 'None' will clear the 
             detail information text field.
         """
         if data is None:
