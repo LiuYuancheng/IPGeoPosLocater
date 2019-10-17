@@ -1,4 +1,4 @@
-# IP_GeoLocation_checker
+## IP_GeoLocation_checker
 **This project will show the server GPS position and related Geolocation information on the Google map based on the user typed in URL or IPv4 address.**
 
 ###### Main UI View
@@ -28,7 +28,7 @@ python geoLRun.py
 
 ------
 
-##### Program Execution Flow 
+#### Program Execution Flow 
 
 | This program will follow below steps to mark the server position on the map: |
 | ------------------------------------------------------------ |
@@ -40,7 +40,7 @@ python geoLRun.py
 
 ------
 
-##### Program Usage Menu
+#### Program Usage Menu
 
 - Run the program:  `python geoLRun.py`
 
@@ -56,7 +56,7 @@ python geoLRun.py
 
   ###### This the an example use the program to find the url "http://www.baidu.com" : 
 
-  ![](https://github.com/LiuYuancheng/IP_GeoLocation_checker/blob/master/doc/mainUI.png)
+  ![](https://github.com/LiuYuancheng/IP_GeoLocation_checker/blob/master/doc/Run.png)
 
 ------
 
