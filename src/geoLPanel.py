@@ -2,55 +2,181 @@
 #-----------------------------------------------------------------------------
 # Name:        TelloPanel.py
 #
-# Purpose:     This function is used to create the control or display panel for
-#              the UAV system.
+# Purpose:     This module is used to create the control or display panel for
+#              ip geolocation system.
 # Author:      Yuancheng Liu
 #
-# Created:     2019/10/01
+# Created:     2019/10/14
 # Copyright:   YC @ Singtel Cyber Security Research & Development Laboratory
 # License:     YC
 #-----------------------------------------------------------------------------
 import wx
+import webbrowser
+from datetime import datetime
 import geoLGobal as gv
 
 #-----------------------------------------------------------------------------
 #-----------------------------------------------------------------------------
 class PanelMap(wx.Panel):
     """ Map panel to show the google map."""
-    def __init__(self, parent):
-        wx.Panel.__init__(self, parent,  size=(768, 512))
+    def __init__(self, parent, panelSize=(768, 512)):
+        wx.Panel.__init__(self, parent,  size=panelSize)
         self.SetBackgroundColour(wx.Colour(200, 200, 200))
-        self.bmp =  wx.Bitmap(gv.BGIMG_PATH, wx.BITMAP_TYPE_ANY)
+        self.panelSize = panelSize
+        self.bmp = wx.Bitmap(gv.BGIMG_PATH, wx.BITMAP_TYPE_ANY)
         self.Bind(wx.EVT_PAINT, self.onPaint)
         self.SetDoubleBuffered(True)
 
-#-----------------------------------------------------------------------------
+#--PanelMap--------------------------------------------------------------------
     def onPaint(self, evt):
-        """ Draw the bitmap and the lines."""
+        """ Draw the map bitmap and mark the gps position."""
         dc = wx.PaintDC(self)
-        dc.DrawBitmap(self.scale_bitmap(self.bmp, 768, 512), 0, 0)
+        l, (w, h) = 8, self.panelSize  # set the bm size and the marker size.
+        dc.DrawBitmap(self._scaleBitmap(self.bmp, w, h), 0, 0)
         dc.SetPen(wx.Pen('RED', width=2, style=wx.PENSTYLE_SOLID))
-        l = 8
         dc.DrawLine(384-l, 256, 384+l, 256)
         dc.DrawLine(384, 256-l, 384, 256+l)
 
-#-----------------------------------------------------------------------------
-    def scale_bitmap(self, bitmap, width, height):
-        """ resize the bitmap """
+#--PanelMap--------------------------------------------------------------------
+    def _scaleBitmap(self, bitmap, width, height):
+        """ Resize a input bitmap.(bitmap-> image -> resize image -> bitmap)"""
         image = wx.ImageFromBitmap(bitmap)
         image = image.Scale(width, height, wx.IMAGE_QUALITY_HIGH)
         result = wx.BitmapFromImage(image)
         return result
 
-#-----------------------------------------------------------------------------
+#--PanelMap--------------------------------------------------------------------
     def updateBitmap(self, bitMap):
+        """ Update the panel bitmap image."""
+        if not bitMap: return
         self.bmp = bitMap
 
-#-----------------------------------------------------------------------------
+#--PanelMap--------------------------------------------------------------------
     def updateDisplay(self, updateFlag=None):
         """ Set/Update the display: if called as updateDisplay() the function will 
-            update the panel, if called as updateDisplay(updateFlag=?) the function will 
-            set the self update flag.
+            update the panel, if called as updateDisplay(updateFlag=?) the function
+            will set the self update flag.
         """
         self.Refresh(False)
         self.Update()
+
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+class PanelCtrl(wx.Panel):
+    """ Function control panel."""
+    def __init__(self, parent):
+        wx.Panel.__init__(self, parent)
+        self.SetBackgroundColour(wx.Colour(200, 210, 200))
+        self.gpsPos = None
+        self.SetSizer(self._buidUISizer())
+    
+#-----------------------------------------------------------------------------
+    def _buidUISizer(self):
+        """ build the control panel sizer. """
+        flagsR = wx.RIGHT | wx.ALIGN_CENTER_VERTICAL
+        ctSizer = wx.BoxSizer(wx.VERTICAL)
+        hbox0 = wx.BoxSizer(wx.HORIZONTAL)
+        ctSizer.AddSpacer(5)
+        # Row idx 0: show the search key and map zoom in level.
+        hbox0.Add(wx.StaticText(self, label="Search key : ".ljust(15)),
+                  flag=flagsR, border=2)
+        self.scKeyCB = wx.ComboBox(
+            self, -1, choices=['IPv4', 'URL'], size=(60, 22), style=wx.CB_READONLY)
+        self.scKeyCB.SetSelection(0)
+        hbox0.Add(self.scKeyCB, flag=flagsR, border=2)
+        hbox0.AddSpacer(20)
+        hbox0.Add(wx.StaticText(
+            self, label="Map ZoomIn Level : ".ljust(20)), flag=flagsR, border=2)
+        self.zoomInCB = wx.ComboBox(
+            self, -1, choices=[str(i) for i in range(10, 15)], size=(60, 22), style=wx.CB_READONLY)
+        self.zoomInCB.SetSelection(3)
+        hbox0.Add(self.zoomInCB, flag=flagsR, border=2)
+        ctSizer.Add(hbox0, flag=flagsR, border=2)
+        ctSizer.AddSpacer(5)
+        # Row idx 1: URL/IP fill in text field.
+        hbox1 = wx.BoxSizer(wx.HORIZONTAL)
+        hbox1.Add(wx.StaticText(self, label="IP/URL : "), flag=flagsR, border=2)
+        self.scValTC = wx.TextCtrl(self, size=(220, 22))
+        hbox1.Add(self.scValTC, flag=flagsR, border=2)
+        hbox1.AddSpacer(2)
+        self.searchBt = wx.Button(self, label='Search', size=(55, 22))
+        self.searchBt.Bind(wx.EVT_BUTTON, self.onSearch)
+        hbox1.Add(self.searchBt, flag=flagsR, border=2)
+        ctSizer.Add(hbox1, flag=flagsR, border=2)
+        ctSizer.AddSpacer(5)
+        # Row idx 2: url parse detail information display area.
+        ctSizer.Add(wx.StaticText(self, label="Detail Information : "),
+                    flag=flagsR, border=2)
+        ctSizer.AddSpacer(5)
+        self.detailTC = wx.TextCtrl(
+            self, size=(330, 300), style=wx.TE_MULTILINE)
+        ctSizer.Add(self.detailTC, flag=flagsR, border=2)
+        ctSizer.AddSpacer(5)
+        hbox2 = wx.BoxSizer(wx.HORIZONTAL)
+        self.clearBt = wx.Button(self, label='Clear', size=(70, 22))
+        self.clearBt.Bind(wx.EVT_BUTTON, self.onClear)
+        hbox2.Add(self.clearBt, flag=flagsR, border=2)
+        hbox2.AddSpacer(10)
+        self.searchBt = wx.Button(
+            self, label='Mark GPS position on google map >>', size=(250, 22))
+        self.searchBt.Bind(wx.EVT_BUTTON, self.onMark)
+        hbox2.Add(self.searchBt, flag=flagsR, border=2)
+        ctSizer.Add(hbox2, flag=flagsR, border=2)
+        return ctSizer
+
+#-----------------------------------------------------------------------------
+    def onClear(self, event):
+        """ clear all the text field"""
+        self.updateDetail(None)
+
+#-----------------------------------------------------------------------------
+    def onMark(self, event):
+        """ Creat the google map mark url and open the url by the system default browser.
+        """
+        url = "http://maps.google.com/maps?z=12&t=m&q=loc:" + \
+            str(self.gpsPos[0])+"+"+str(self.gpsPos[1])
+        webbrowser.open_new(url)
+        webbrowser.get('chrome').open_new(url)
+
+#-----------------------------------------------------------------------------
+    def onSearch(self, event):
+        """ convert a url to the IP address then  find the GPS position of the 
+            IP address and draw it on the map.
+        """
+        self.updateDetail("----- %s -----" %str(datetime.today()))
+        scIPaddr = val = self.scValTC.GetValue()
+        # Convert the URL to ip address if needed.
+        if self.scKeyCB.GetSelection():
+            url = str(val.split('//')[1]).split('/')[0] if 'http' in val else val.split('/')[0]
+            self.updateDetail(url)
+            scIPaddr = gv.iGeoMgr.urlToIp(url)
+        if gv.iGeoMgr.checkIPValid(scIPaddr):
+            self.updateDetail(scIPaddr)
+        else:
+            print(" The IP address is invalid.")
+            return None
+        # get the gps pocition: 
+        self.gpsPos = (lat, lon) = gv.iGeoMgr.getGpsPos(scIPaddr)
+        self.updateDetail('Server GPS position[%s]' %str((lat, lon)))
+        # get the position google map and update the display
+        bitmap = gv.iGeoMgr.PIL2wx(gv.iGeoMgr.getGoogleMap(lat, lon, 3, 2, 13))
+        if gv.iMapPanel:
+            gv.iMapPanel.updateBitmap(bitmap)
+            gv.iMapPanel.updateDisplay()
+        self.updateDetail("----- Finished -----")
+
+#-----------------------------------------------------------------------------
+    def updateDetail(self, data):
+        """ update the data in the detail text field. input 'None' will clear the 
+            detail information text field.
+        """
+        if data is None:
+            self.scValTC.Clear()
+            self.detailTC.Clear()
+        else:
+            self.detailTC.AppendText(" - %s \n" %str(data))
+
+
+
+
+
