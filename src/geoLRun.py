@@ -2,8 +2,8 @@
 #-----------------------------------------------------------------------------
 # Name:        geoLRun.py
 #
-# Purpose:     This function is used to convert a url to the IP address then 
-#              find the GPS position of the IP address and draw it on the map.
+# Purpose:     This module is used to convert a url to the IP address then 
+#              find the GPS position it and draw it on the google map.
 #
 # Author:      Yuancheng Liu
 #
@@ -11,7 +11,6 @@
 # Copyright:   YC @ Singtel Cyber Security Research & Development Laboratory
 # License:     YC
 #-----------------------------------------------------------------------------
-
 import os, sys
 import time
 import math
@@ -23,14 +22,13 @@ from PIL import Image, ImageDraw
 
 import wx  # use wx to build the UI.
 
-
 import geoLGobal as gv
 import geoLPanel as gp
 
 #-----------------------------------------------------------------------------
 #-----------------------------------------------------------------------------
 class GeoLFrame(wx.Frame):
-    """ url/IP gps position finder."""
+    """ URL/IP gps position finder main UI frame."""
     def __init__(self, parent, id, title):
         """ Init the UI and parameters """
         wx.Frame.__init__(self, parent, id, title, size=(1150, 560))
@@ -39,7 +37,7 @@ class GeoLFrame(wx.Frame):
         gv.iGeoMgr = self.geoMgr = GeoMgr(self)
         self.SetSizer(self._buidUISizer())
 
-    #-----------------------------------------------------------------------------
+#--GeoLFrame-------------------------------------------------------------------
     def _buidUISizer(self):
         """ Build the main UI Sizer. """
         flagsR = wx.RIGHT | wx.ALIGN_CENTER_VERTICAL
@@ -58,43 +56,41 @@ class GeoLFrame(wx.Frame):
 #-----------------------------------------------------------------------------
 #-----------------------------------------------------------------------------
 class GeoMgr(object):
-    """ Manager module to handle the geo position calculation.
-    """
+    """ Manager module to handle the geo position calculation."""
     def __init__(self, parent):
+        self.parent = parent
         self.scIPaddr = ''      # url ip address
-        self.gpsPos = [0, 0]    # url gps position
 
-#-----------------------------------------------------------------------------
+#--GeoMgr----------------------------------------------------------------------
     def checkIPValid(self, ipAddr):
-        """ check whether a ip address is a valid one
-        """
+        """ Check whether a IP address is a valid one."""
         try:
             socket.inet_aton(ipAddr)
             return True
         except socket.error:
             return False
 
-#-----------------------------------------------------------------------------
+#--GeoMgr----------------------------------------------------------------------
     def getGpsPos(self, ipaddr):
-        """ connect to the https://ipinfo.io to get the input ipaddr's gps popsition
+        """ Connect to the https://ipinfo.io to get the input ipaddr's gps position
             under float decimal format.
         """
-        data = load(urlopen('https://ipinfo.io/' + str(ipaddr) + '/json'))
-        (lat, lon) = (0, 0)
+        data, lat, lon = load(urlopen('https://ipinfo.io/' + str(ipaddr) + '/json')), 0, 0
         for attr in data.keys():
-            datastr = str(attr).ljust(13)+data[attr]
-            if gv.iCtrlPanel: gv.iCtrlPanel.updateDetail(datastr)
+            if gv.iCtrlPanel:
+                gv.iCtrlPanel.updateDetail(str(attr).ljust(13)+data[attr])
             if attr == 'loc': (lat, lon) = data[attr].split(',')
         return (float(lat), float(lon))
 
-#-----------------------------------------------------------------------------
+#--GeoMgr----------------------------------------------------------------------
     def urlToIp(self, url):
-        """ convert the URL to ip address"""
+        """ Convert the URL to ip address."""
         return str(socket.gethostbyname(url))
 
-#-----------------------------------------------------------------------------
+#--GeoMgr----------------------------------------------------------------------
     def getGoogleMap(self, lat, lng, wTileN, hTileN, zoom):
-        """ Download the google map based on the GPS position.
+        """ Download the google map tile based on the GPS position and combine
+            the tiles to one image.
         """
         start_x, start_y = self.getStartTlXY(lat, lng, zoom)
         width, height = 256 * wTileN, 256 * hTileN
@@ -105,13 +101,11 @@ class GeoMgr(object):
                     str(start_x+x)+'&y='+str(start_y+y)+'&z='+str(zoom)
                 current_tile = str(x)+'-'+str(y)
                 urllib.request.urlretrieve(url, current_tile)
-                im = Image.open(current_tile)
-                map_img.paste(im, (x*256, y*256))
+                map_img.paste(Image.open(current_tile), (x*256, y*256))
                 os.remove(current_tile)
         return map_img
 
-
-#-----------------------------------------------------------------------------
+#--GeoMgr----------------------------------------------------------------------
     def getStartTlXY(self, lat, lng,zoom):
         """ Generates an X,Y tile coordinate based on the latitude, longitude 
             and zoom level
@@ -129,17 +123,15 @@ class GeoMgr(object):
         point_y = ((tile_size / 2) + 0.5 * math.log((1+sin_y)/(1-sin_y)) * -(tile_size / (2 * math.pi))) * numTiles // tile_size
         return int(point_x), int(point_y)
 
-#-----------------------------------------------------------------------------
+#--GeoMgr----------------------------------------------------------------------
     def PIL2wx(self, image):
-        """ Convert the PIL image to wx bitmap.
-        """
+        """ Convert the PIL image to wx bitmap."""
         width, height = image.size
         return wx.BitmapFromBuffer(width, height, image.tobytes())
 
-#-----------------------------------------------------------------------------
+#--GeoMgr----------------------------------------------------------------------
     def wx2PIL(self, bitmap):
-        """ Convert the wxBitmap to PIL image.
-        """
+        """ Convert the wxBitmap to PIL image."""
         size = tuple(bitmap.GetSize())
         try:
             buf = size[0]*size[1]*3*"\x00"

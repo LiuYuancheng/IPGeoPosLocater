@@ -165,7 +165,8 @@ class PanelCtrl(wx.Panel):
         self.gpsPos = (lat, lon) = gv.iGeoMgr.getGpsPos(scIPaddr)
         self.updateDetail('Server GPS position[%s]' % str((lat, lon)))
         # get the position google map and update the display
-        bitmap = gv.iGeoMgr.PIL2wx(gv.iGeoMgr.getGoogleMap(lat, lon, 3, 2, 13))
+        bitmap = gv.iGeoMgr.PIL2wx(gv.iGeoMgr.getGoogleMap(
+            lat, lon, 3, 2, int(self.zoomInCB.GetValue())))
         if gv.iMapPanel:
             gv.iMapPanel.updateBitmap(bitmap)
             gv.iMapPanel.updateDisplay()
