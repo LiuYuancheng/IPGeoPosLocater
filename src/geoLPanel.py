@@ -165,8 +165,8 @@ class PanelCtrl(wx.Panel):
         self.gpsPos = (lat, lon) = gv.iGeoMgr.getGpsPos(scIPaddr)
         self.updateDetail('Server GPS position[%s]' % str((lat, lon)))
         (dcId, dist) = gv.iDCPosMgr.fineNear(self.gpsPos)
-        self.updateDetail('Cloest AWS data center[%s]' % str(dcId))
-        self.updateDetail('Dsstance [%s]' % str(dist))
+        self.updateDetail('Nearest AWS data center[%s]' % str(dcId))
+        self.updateDetail('Distance [%s] Km' % str(dist))
         # get the position google map and update the display
         bitmap = gv.iGeoMgr.PIL2wx(gv.iGeoMgr.getGoogleMap(
             lat, lon, 3, 2, int(self.zoomInCB.GetValue())))
