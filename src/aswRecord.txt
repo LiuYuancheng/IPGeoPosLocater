@@ -1,0 +1,114 @@
+IAD1;4101A  Westfax  Dr. Chantilly, VA 20151;38.8978449,-77.4561427
+IAD2;21715 Filigree Court, Bldg F, Ashburn, VA 20147;39.0163627,-77.4612112
+IAD4;PAIX, 7990 Science Applications Court, Vienna, VA  22183;38.9086134,-77.2226617
+IAD5;MCI, 21830 UUNET Way, Ashburn, VA  20147;39.0125402,-77.4774779
+IAD6;43831 Devin Shafron Dr. Building C, Ashburn, VA 20147;39.0026533,-77.487622
+IAD7;7505 Mason King Ct. Manassas, VA 20109;38.791201,-77.5403957
+IAD8;13461 Sunrise Valley Drive, Suite 510, Herndon, VA 20171;38.9584495,-77.415448
+IAD9;4100  Westfax  Dr. Chantilly, VA 20151;38.899661,-77.4555037
+IAD10;45360 West Severn Way, Sterling, VA 20166;39.0209995,-77.4346109
+IAD11;7510 Mason King Ct, Manassas VA 20109;38.790495,-77.5428997
+IAD12;22630 Dulles Summit Court, Sterling, VA 20166;38.9888426,-77.4498864
+IAD13;43790 Devin Shafron Drive, Ashburn, VA 20147;39.004979,-77.4877347
+IAD14;11801 Brewers Spring Road, Manassas, VA 20109;38.7899196,-77.5505348
+IAD15;22631 Dulles Summit Court, Sterling, VA 20166;38.991701,-77.4507516
+IAD16;22651 Dulles Summit Ct. Sterling, VA 20166;38.9906154,-77.4506933
+IAD21;12900 Worldgate Drive Suite 800, Herndon, VA 20170;38.9558004,-77.3985963
+IAD22;4155 Westfax Dr. Chantilly, VA 20151;38.8979461,-77.4572373
+IAD23;43830 Devin Shafron Dr. Ashburn, VA 20147;39.004182,-77.4862967
+IAD24;7610 Mason King Ct. Manassas, VA 20109;38.7911269,-77.5417733
+IAD32;1304 Squire Ct. Sterling, VA 20166;39.0216077,-77.4369764
+IAD50;21271 Smith Switch Rd. Ashburn, VA 20147;39.0273261,-77.4594538
+IAD51;Prologis building #9, 45220 Prologis Plaza, Sterling, VA 20166;38.9914781,-77.4388012
+IAD52;11800 Brewers Spring Rd. Manassas, VA 20109;38.6806462,-77.4321358,17
+IAD53;12100 Sunrise Valley Dr. Reston, VA 20191;38.9506292,-77.3667527
+IAD54;43791 Devin Shafron Dr. Ashburn, VA 20147;39.003285,-77.4894027
+IAD55;15395 John Marshall Hwy, Haymarket, VA 20169;38.815228,-77.6505377
+IAD56;45210 Prologis Plaza, Sterling, VA 20166;38.9906882,-77.4395764
+IAD57;Prologis building 10, 22755 Relocation Drive, Sterling, VA 20166;38.9875123,-77.4443924
+IAD58;22745 Relocation Drive, Sterling, VA 20166;38.986292,-77.4441488
+IAD59;7600 Doane Drive, Manassas, VA 20109;38.7922101,-77.5510543
+IAD60;21267 Smith Switch Rd, Ashburn, VA 20147;39.0285999,-77.4607625
+IAD66;Equinix DC11, 21721 Filigree Court, Ashburn, VA 20147;39.0150491,-77.4606192
+IAD67;43940 Digital Loudoun Plaza, Ashburn VA 20147;39.0008206,-77.4813866
+IAD69;21111 Ridgetop Circle, Sterling, VA 20166;39.025434,-77.4162877
+IAD71;21263 Smith Switch Rd. Ashburn VA 20147;39.0290707,-77.4611501
+IAD73;7060 Wellington Rd, Manassas, VA 20109;38.7798649,-77.5601382
+IAD74;7080 Wellington Rd, Manassas, VA 20109;38.7798649,-77.5601382
+IAD77;9156 Hornbaker Rd, Manassas, VA 20109;38.7578777,-77.534939
+SEA3;1100 Second Avenue, Basement Floor Security Office, Seattle, WA 98101;47.6063789,-122.3379682
+SEA4;Westin Building, downtown Seattle, 2001 6th Avenue;47.6143459,-122.3407586
+SEA14; 12301 Tukwila International Blvd., Tukwila, WA 98168;47.4920675,-122.2954866
+SEA15;Tukwila, 3355 S 120th Pl, Tukwila, WA 98168;47.4918832,-122.291981
+SEA19;Fisher Plaza, downtown Seattle 100 4th Ave. Seattle, WA, 98109;47.6015648,-122.3312097
+SEA31;4200 194th St. SW. Suite 100 Lynnwood, WA, 98036;47.8222879,-122.2919824
+SEA32; 1531 Utah Ave S, Seattle, WA 98134;47.589252,-122.3380068
+SEA72;Digital Fortress, 3101 Western Ave, Seattle WA 98121, California Bay Area;47.6179908,-122.3587666
+SFO4;Equinix (SV8), C/O A100 US LLC. 529 Bryant St;1.2987729,103.7841928
+SFO5;Equinix (SV1), C/O A100 US LLC., 11 Great Oaks, Blvd San Jose, CA 95123;37.2413927,-121.7851874
+SFO6;Terremark Inc. NAP West, C/O A100 US LLC. 3000 Corvin Drive Santa Clara, CA 95051-0723;37.3762156,-121.990714
+SFO7;Equinix (SV2), C/O A100 US LLC. 1350 Duane Ave, Santa Clara, CA 95054;37.378663,-121.9570974
+SFO8;Digital Realty Trust, C/O A100 US LLC. 200 Paul Ave;37.7231889,-122.4007314
+SFO9;A100 US LLC.26464 Corporate Ave. Hayward, CA 94545;37.627232,-122.114322
+SFO20;Coresite CO A100 US LLC, 2972 Stender Way, Santa Clara, CA 95051;37.3762075,-121.9728725
+SFO21;Coresite CO A100 US LLC, 2950 Stender Way, Santa Clara, CA 95054;37.376259,-121.9728937
+PDX1;73575 Lewis and Clark Drive, Boardman, OR  97818;45.8507306,-119.6327312
+PDX2;2400 Beach Access Road, Umatilla, OR  97882;45.9161836,-119.2698243
+PDX4;79539 Rippee Road Boardman, OR 97818;45.8411257,-119.6547198
+PDX50;73577 Lewis and Clark Drive, Boardman, OR 97818;45.8522448,-119.6320149
+PDX51;3200 Beach Access Road, Umatilla, OR 97882;45.917463,-119.2684488
+PDX52;79536 Rippee Road, Boardman;45.8422797,-119.6564286
+PDX79;73075 LEWIS & CLARK DRIVE, Boardman, OR 97818;34.7458938,-97.3626038
+DUB2;Citadel 100 Building, 4033 Citywest Avenue, Dublin 24, Ireland;53.290525,-6.4189307
+DUB3;Unit9, Servecentric, Blanchardstown Corporate Park, Dublin 15, Ireland;53.4123839,-6.3725516
+DUB4/7;International Exchange Centre, Clonshaugh Industrial Estate, Dublin 17, Ireland;53.4088642,-6.2226685
+DUB8;Amazon Data Service Ireland Ltd. Hexagon building, Blanchardstown Bus & Tech Snugborough Road, Dublin 15, Ireland;53.4034576,-6.3657598
+DUB9;30A Greenhills road, Tallaght, Dublin 24, Ireland;53.2970794,-6.3519684
+DUB10/50/51;Unit AF1, Clonshaugh Industrial Estate, Dublin 17, Ireland;53.4004522,-6.2232514
+DUB53;Unit D, Hibernian Insurance Industrial Estate, Greenhills Road Tallaght, Dublin 24, Ireland;53.295954,-6.376671
+LUX2;Amazon EU Sarl, c/o SES ASTRA, L-6915 Chateau de Betzdorf;49.6876153,6.3451821
+LUX8;Amazon EU Sarl, c/o Ebrc Resilience Centre South (RCS), 210, Rue de Noertzange, L-3670 Kayl, Luxembourg;49.4974262,6.0488988
+LUX9;Amazon EU Sarl, c/o European Data Hub, 12D, Impasse Drosbach;49.5794575,6.1077733
+FRA50;A100 ROW GmbH, C/O Equinix, Kleyerstrasse 88-90, Frankfurt am Main, 60326, Germany;50.09867,8.6300713
+FRA52;A100 ROW GmbH, C/O Interxion, Weismullerstrasse 25, Frankfurt am Main, 60314, Germany;50.1193074,8.7347681
+FRA53;A100 ROW GmbH, C/O E-shelter, Karl Landsteiner Ring 4, Russelsheim, 65428, Germany;49.9747202,8.4480807
+FRA54;A100 ROW GmbH, C/O E-shelter, Eschborner Landstrasse 100, Frankfurt am Main, 60489, Germany;50.1288691,8.5990423
+BJS 9;ZhongGuanCun Hi-tech Zone Block, Beijing Light-Machinery-Electricity Industrial Area, Tongzhou District, Beijing, China 101111;39.8094303,116.5695686
+BJS 10;5th floor, Dexin Building(D2 Building), A10 North Jiuxianqiao Road, Chaoyang District, Beijing, China, 100015;39.9814836,116.490768
+BJS 11;Amazon, Guanghuan Cloud Valley, Chuangyigu Rd, Yanshun Rd,Yanjiao, Langfang, Hebei, 065201, China;39.9759682,116.7741207
+BJS 12;Xinghaist. 1 , South District, Beijing Economic-Technological Development Area, Beijing, China, 100176;39.9375346,115.837023
+BJS20;1 Lou Zhuang Road, Langfang, Hebei province, China;39.5258632,116.7546468
+ZHY53/BJS21;No.2, East Central Avenue, Shapotou DistrictZhongwei,NingxiaChina;37.5241541,104.9835208
+PEK4;Level P3, Tower E1, The Towers, Oriental Plaza, No1,East Chang'An Ave.Dong Cheng District, Beijing, 100738 China;39.909544,116.4123433,17
+PEK7;6th Floor, Dexin Building, A10 JiuXianQiao North Road, Chaoyang District, Beijing, 100015, China;39.982055,116.5049687
+PEK50;Amazon, Guanghuan Cloud Valley, Chuangyigu Rd, Yanshun Rd,Yanjiao, Langfang, Hebei, 065201, China;39.9732992,116.7736253
+NRT4;Equinix Systems KK, TY2 IBX Center, 3-8-21 Higashi Shinagawa, Shinagawa-ku, Tokyo, Japan  104-002;35.617458,139.7458683
+NRT7;Systems Plaza Yokohama, 1-2-10 Isogo, Isogo-ku, Yokohama, Kanagawa-ken, Japan 235-0016;35.4122587,139.6239815
+NRT8;SCSK DC, 2-6-1 Otsuka, Inzai City, Chiba, Japan 270-1352;35.8094023,140.1179624
+NRT11;Inzai Building, 2-3 Otsuka, Inzai City, Chiba, Japan 270-1352;35.8073458,140.1145882
+NRT12;KDDI 4th Tama Network Center Bldg, 3-2 Karakida, Tama, Tokyo, 206-0035;35.6100339,139.4006031
+NRT20;Inzai Technology Building, 2-101-14 Izumino, Inzai, Chiba 270-1360, JAPAN;35.8055667,140.1239637
+NRT51;Nishi-Shinsaibashi Bldg. 8F, 1-26-1, Shin-machi, Nishi-ku, Osaka-city, Osaka, Japan 550-0013;34.6757144,135.4933973
+NRT52;Telehouse Osaka Chuo Data Center KDDI Osaka Bldg, 2-2-72 Shiromi, Chuo-ku, Osaka-city, Osaka, Japan 540-0001;34.6929822,135.5316242
+NRT53;Equinix TY3-IBX Data Center, 1-9-20 Edagawa, Koto-ku, Tokyo, Japan 135-0051;35.656705,139.8012313
+NRT55;Canon IT Nishi Tokyo Data Center, 3-5-33 Mukodai-cho, Nishi Tokyo-city, Tokyo, Japan 188-0013;35.48847,137.5263065
+SIN2;Amazon Asia-Pacific Resources Pte Ltd, C/O Equinix Pacific Pte Ltd (SIN2), 15 Pioneer Walk, Level 4 Singapore 627753;1.3213606,103.6937452
+SIN3;Amazon Asia-Pacific Resources Pte Ltd, C/O Keppel Datahub Pte Ltd (SIN3), 25 Tampines Street 92. Singapore 528877;1.3405812,103.9420607
+SIN4;Amazon Asia-Pacific Resources Pte Ltd, C/O Tata Communication International Pte Ltd (SIN4). 35 Tai Seng Street, Singapore 534103;1.336588,103.8866123
+SIN5;Amazon Asia-Pacific Resources Pte Ltd, C/O Tata Communication International Pte Ltd (SIN5), 2 Tai Seng Avenue, Singapore 534408;1.3366555,103.8891257
+SIN50;C/O Equinix Pacific Pte Ltd (SIN50), 15 Pioneer Walk, Level 4, Singapore 627753;1.3213606,103.6937452
+SIN51;Amazon Asia-Pacific Resources Pte Ltd, C/O Keppel Datahub Pte Ltd (SIN51), 27 Tampines Street 92, Singapore 528878;1.3405812,103.9420607
+SYD1;C/O Equinix Australia, 47 Bourke Rd, Alexandria NSW 2015, Australia;-33.9117762,151.1907535
+SYD4;C/O Global Switch, 400 Harris St, Ultimo NSW 2007, Australia;-33.8756413,151.1953976
+SYD5;C/O Fujitsu Australia, 6 Bellevue Circuit, Pemulwuy NSW 2145, Australia;-33.8218857,150.9218609
+SYD51;1 William Dean Street, Eastern Creek NSW 2766, Australia;-33.7945188,150.8663868
+SYD52;42A Bluett Drive, Smeaton Grange, NSW 2567, Australia;-34.0369275,150.7650758
+SYD6;C/O Securus Australia, 5 Broadcast Way (South Gate), Artarmon NSW 2064, Australia;-33.8200058,151.1841065
+SYD61;C/O NextDC S1, 4 Eden Park Drive, Macquarie Park NSW 2113, Australia;-33.785173,151.1292593
+SYD7;C/O Fujitsu Australia, 4 Figtree Drive, Homebush NSW 2127, Australia;-33.8497428,151.0694204
+GRU1;Avenida Ceci, 1900 CJ A - 1 Andar Condominio Walter Torre, Tambore Barueri / Sao Paulo BRAZIL, 06460-120;-23.4949839,-46.8164453
+GRU2;Rua Guido Camargo Penteado Sobrinho, 3685, Barao Geraldo, 13082-800;-22.8208252,-47.1020552
+GRU3; Rua Bento Branco de Andrade Filho, 621, Sao Paulo / Sao Paulo BRAZIL, 04757-000;-23.6504879,-46.7230545,17
+GRU4;Rua Presbitero Plinio Alves de Souza, 757 - Medeiros, 13212-181;-23.191744,-46.9767932
+GRU50;Av Ceci - 1850 - Tambore, Barueri / Sao Paulo, 06.460-120;-23.4949696,-46.8134941
+GIG50;Estrada dos Bandeirantes, 10916, Vargem Pequena Jacarepagu, Rio de Janeiro / Rio de Janeiro, 22783-111;-22.9854491,-43.4334929
