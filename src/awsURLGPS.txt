@@ -1,0 +1,227 @@
+https://maps.google.com/?q=4101A  Westfax  Dr. Chantilly, VA 20151
+38.8978449,-77.4561427
+https://maps.google.com/?q=21715 Filigree Court, Bldg F, Ashburn, VA 20147
+39.0163627,-77.4612112
+https://maps.google.com/?q=PAIX, 7990 Science Applications Court, Vienna, VA  22183
+38.9086134,-77.2226617
+https://maps.google.com/?q=MCI, 21830 UUNET Way, Ashburn, VA  20147
+39.0125402,-77.4774779
+https://maps.google.com/?q=43831 Devin Shafron Dr. Building C, Ashburn, VA 20147
+39.0026533,-77.487622
+https://maps.google.com/?q=7505 Mason King Ct. Manassas, VA 20109
+38.791201,-77.5403957
+https://maps.google.com/?q=13461 Sunrise Valley Drive, Suite 510, Herndon, VA 20171
+38.9584495,-77.415448
+https://maps.google.com/?q=4100  Westfax  Dr. Chantilly, VA 20151
+38.899661,-77.4555037
+https://maps.google.com/?q=45360 West Severn Way, Sterling, VA 20166
+39.0209995,-77.4346109
+https://maps.google.com/?q=7510 Mason King Ct, Manassas VA 20109
+38.790495,-77.5428997
+https://maps.google.com/?q=22630 Dulles Summit Court, Sterling, VA 20166
+38.9888426,-77.4498864
+https://maps.google.com/?q=43790 Devin Shafron Drive, Ashburn, VA 20147
+39.004979,-77.4877347
+https://maps.google.com/?q=11801 Brewers Spring Road, Manassas, VA 20109
+38.7899196,-77.5505348
+https://maps.google.com/?q=22631 Dulles Summit Court, Sterling, VA 20166
+38.991701,-77.4507516
+https://maps.google.com/?q=22651 Dulles Summit Ct. Sterling, VA 20166
+38.9906154,-77.4506933
+https://maps.google.com/?q=12900 Worldgate Drive Suite 800, Herndon, VA 20170
+38.9558004,-77.3985963
+https://maps.google.com/?q=4155 Westfax Dr. Chantilly, VA 20151
+38.8979461,-77.4572373
+https://maps.google.com/?q=43830 Devin Shafron Dr. Ashburn, VA 20147
+39.004182,-77.4862967
+https://maps.google.com/?q=7610 Mason King Ct. Manassas, VA 20109
+38.7911269,-77.5417733
+https://maps.google.com/?q=1304 Squire Ct. Sterling, VA 20166
+39.0216077,-77.4369764
+https://maps.google.com/?q=21271 Smith Switch Rd. Ashburn, VA 20147
+39.0273261,-77.4594538
+https://maps.google.com/?q=Prologis building #9, 45220 Prologis Plaza, Sterling, VA 20166
+38.9914781,-77.4388012
+https://maps.google.com/?q=11800 Brewers Spring Rd. Manassas, VA 20109
+38.6806462,-77.4321358,17
+https://maps.google.com/?q=12100 Sunrise Valley Dr. Reston, VA 20191
+38.9506292,-77.3667527
+https://maps.google.com/?q=43791 Devin Shafron Dr. Ashburn, VA 20147
+39.003285,-77.4894027
+https://maps.google.com/?q=15395 John Marshall Hwy, Haymarket, VA 20169
+38.815228,-77.6505377
+https://maps.google.com/?q=45210 Prologis Plaza, Sterling, VA 20166
+38.9906882,-77.4395764
+https://maps.google.com/?q=Prologis building 10, 22755 Relocation Drive, Sterling, VA 20166
+38.9875123,-77.4443924
+https://maps.google.com/?q=22745 Relocation Drive, Sterling, VA 20166
+38.986292,-77.4441488
+https://maps.google.com/?q=7600 Doane Drive, Manassas, VA 20109
+38.7922101,-77.5510543
+https://maps.google.com/?q=21267 Smith Switch Rd, Ashburn, VA 20147
+39.0285999,-77.4607625
+https://maps.google.com/?q=Equinix DC11, 21721 Filigree Court, Ashburn, VA 20147
+39.0150491,-77.4606192
+https://maps.google.com/?q=43940 Digital Loudoun Plaza, Ashburn VA 20147
+39.0008206,-77.4813866
+https://maps.google.com/?q=21111 Ridgetop Circle, Sterling, VA 20166
+39.025434,-77.4162877
+https://maps.google.com/?q=21263 Smith Switch Rd. Ashburn VA 20147
+39.0290707,-77.4611501
+https://maps.google.com/?q=7060 Wellington Rd, Manassas, VA 20109
+38.7798649,-77.5601382
+https://maps.google.com/?q=7080 Wellington Rd, Manassas, VA 20109
+38.7798649,-77.5601382
+https://maps.google.com/?q=9156 Hornbaker Rd, Manassas, VA 20109
+38.7578777,-77.534939
+https://maps.google.com/?q=1100 Second Avenue, Basement Floor Security Office, Seattle, WA 98101
+47.6063789,-122.3379682
+https://maps.google.com/?q=Westin Building, downtown Seattle, 2001 6th Avenue
+47.6143459,-122.3407586
+https://maps.google.com/?q= 12301 Tukwila International Blvd., Tukwila, WA 98168
+47.4920675,-122.2954866
+https://maps.google.com/?q=Tukwila, 3355 S 120th Pl, Tukwila, WA 98168
+47.4918832,-122.291981
+https://maps.google.com/?q=Fisher Plaza, downtown Seattle 100 4th Ave. Seattle, WA, 98109
+47.6015648,-122.3312097
+https://maps.google.com/?q=4200 194th St. SW. Suite 100 Lynnwood, WA, 98036
+47.8222879,-122.2919824
+https://maps.google.com/?q= 1531 Utah Ave S, Seattle, WA 98134
+47.589252,-122.3380068
+https://maps.google.com/?q=Digital Fortress, 3101 Western Ave, Seattle WA 98121, California Bay Area 
+47.6179908,-122.3587666
+https://maps.google.com/?q=Equinix (SV8), C/O A100 US LLC. 529 Bryant St
+1.2987729,103.7841928
+https://maps.google.com/?q=Equinix (SV1), C/O A100 US LLC., 11 Great Oaks, Blvd San Jose, CA 95123
+37.2413927,-121.7851874
+https://maps.google.com/?q=Terremark Inc. NAP West, C/O A100 US LLC. 3000 Corvin Drive Santa Clara, CA 95051-0723
+37.3762156,-121.990714
+https://maps.google.com/?q=Equinix (SV2), C/O A100 US LLC. 1350 Duane Ave, Santa Clara, CA 95054
+37.378663,-121.9570974
+https://maps.google.com/?q=Digital Realty Trust, C/O A100 US LLC. 200 Paul Ave
+37.7231889,-122.4007314
+https://maps.google.com/?q=A100 US LLC.26464 Corporate Ave. Hayward, CA 94545
+37.627232,-122.114322
+https://maps.google.com/?q=Coresite CO A100 US LLC, 2972 Stender Way, Santa Clara, CA 95051
+37.3762075,-121.9728725
+https://maps.google.com/?q=Coresite CO A100 US LLC, 2950 Stender Way, Santa Clara, CA 95054
+37.376259,-121.9728937
+https://maps.google.com/?q=73575 Lewis and Clark Drive, Boardman, OR  97818
+45.8507306,-119.6327312
+https://maps.google.com/?q=2400 Beach Access Road, Umatilla, OR  97882
+45.9161836,-119.2698243
+https://maps.google.com/?q=79539 Rippee Road Boardman, OR 97818
+45.8411257,-119.6547198
+https://maps.google.com/?q=73577 Lewis and Clark Drive, Boardman, OR 97818
+45.8522448,-119.6320149
+https://maps.google.com/?q=3200 Beach Access Road, Umatilla, OR 97882
+45.917463,-119.2684488
+https://maps.google.com/?q=79536 Rippee Road, Boardman
+45.8422797,-119.6564286
+https://maps.google.com/?q=73075 LEWIS & CLARK DRIVE, Boardman, OR 97818
+34.7458938,-97.3626038
+https://maps.google.com/?q=Citadel 100 Building, 4033 Citywest Avenue, Dublin 24, Ireland
+53.290525,-6.4189307
+https://maps.google.com/?q=Unit9, Servecentric, Blanchardstown Corporate Park, Dublin 15, Ireland
+53.4123839,-6.3725516
+https://maps.google.com/?q=International Exchange Centre, Clonshaugh Industrial Estate, Dublin 17, Ireland
+53.4088642,-6.2226685
+https://maps.google.com/?q=Amazon Data Service Ireland Ltd. Hexagon building, Blanchardstown Bus & Tech Snugborough Road, Dublin 15, Ireland
+53.4034576,-6.3657598
+https://maps.google.com/?q=30A Greenhills road, Tallaght, Dublin 24, Ireland
+53.2970794,-6.3519684
+https://maps.google.com/?q=Unit AF1, Clonshaugh Industrial Estate, Dublin 17, Ireland
+53.4004522,-6.2232514
+https://maps.google.com/?q=Unit D, Hibernian Insurance Industrial Estate, Greenhills Road Tallaght, Dublin 24, Ireland
+53.295954,-6.376671
+https://maps.google.com/?q=Amazon EU Sarl, c/o SES ASTRA, L-6915 Chateau de Betzdorf
+49.6876153,6.3451821
+https://maps.google.com/?q=Amazon EU Sarl, c/o Ebrc Resilience Centre South (RCS), 210, Rue de Noertzange, L-3670 Kayl, Luxembourg
+49.4974262,6.0488988
+https://maps.google.com/?q=Amazon EU Sarl, c/o European Data Hub, 12D, Impasse Drosbach
+49.5794575,6.1077733
+https://maps.google.com/?q=A100 ROW GmbH, C/O Equinix, Kleyerstrasse 88-90, Frankfurt am Main, 60326, Germany
+50.09867,8.6300713
+https://maps.google.com/?q=A100 ROW GmbH, C/O Interxion, Weismullerstrasse 25, Frankfurt am Main, 60314, Germany
+50.1193074,8.7347681
+https://maps.google.com/?q=A100 ROW GmbH, C/O E-shelter, Karl Landsteiner Ring 4, Russelsheim, 65428, Germany
+49.9747202,8.4480807
+https://maps.google.com/?q=A100 ROW GmbH, C/O E-shelter, Eschborner Landstrasse 100, Frankfurt am Main, 60489, Germany
+50.1288691,8.5990423
+https://maps.google.com/?q=ZhongGuanCun Hi-tech Zone Block, Beijing Light-Machinery-Electricity Industrial Area, Tongzhou District, Beijing, China 101111
+
+https://maps.google.com/?q=5th floor, Dexin Building(D2 Building), A10 North Jiuxianqiao Road, Chaoyang District, Beijing, China, 100015
+
+https://maps.google.com/?q=Amazon, Guanghuan Cloud Valley, Chuangyigu Rd, Yanshun Rd,Yanjiao, Langfang, Hebei, 065201, China
+
+https://maps.google.com/?q=Xinghaist. 1 , South District, Beijing Economic-Technological Development Area, Beijing, China, 100176
+
+https://maps.google.com/?q=1 Lou Zhuang Road, Langfang, Hebei province, China
+
+https://maps.google.com/?q=No.2, East Central Avenue, Shapotou DistrictZhongwei,NingxiaChina
+
+https://maps.google.com/?q=Level P3, Tower E1, The Towers, Oriental Plaza, No1,East Chang'An Ave.Dong Cheng District, Beijing, 100738 China
+
+https://maps.google.com/?q=6th Floor, Dexin Building, A10 JiuXianQiao North Road, Chaoyang District, Beijing, 100015, China
+
+https://maps.google.com/?q=Amazon, Guanghuan Cloud Valley, Chuangyigu Rd, Yanshun Rd,Yanjiao, Langfang, Hebei, 065201, China
+
+https://maps.google.com/?q=Equinix Systems KK, TY2 IBX Center, 3-8-21 Higashi Shinagawa, Shinagawa-ku, Tokyo, Japan  104-002
+
+https://maps.google.com/?q=Systems Plaza Yokohama, 1-2-10 Isogo, Isogo-ku, Yokohama, Kanagawa-ken, Japan 235-0016
+
+https://maps.google.com/?q=SCSK DC, 2-6-1 Otsuka, Inzai City, Chiba, Japan 270-1352
+
+https://maps.google.com/?q=Inzai Building, 2-3 Otsuka, Inzai City, Chiba, Japan 270-1352
+
+https://maps.google.com/?q=KDDI 4th Tama Network Center Bldg, 3-2 Karakida, Tama, Tokyo, 206-0035
+
+https://maps.google.com/?q=Inzai Technology Building, 2-101-14 Izumino, Inzai, Chiba 270-1360, JAPAN
+
+https://maps.google.com/?q=Nishi-Shinsaibashi Bldg. 8F, 1-26-1, Shin-machi, Nishi-ku, Osaka-city, Osaka, Japan 550-0013
+
+https://maps.google.com/?q=Telehouse Osaka Chuo Data Center KDDI Osaka Bldg, 2-2-72 Shiromi, Chuo-ku, Osaka-city, Osaka, Japan 540-0001
+
+https://maps.google.com/?q=Equinix TY3-IBX Data Center, 1-9-20 Edagawa, Koto-ku, Tokyo, Japan 135-0051
+
+https://maps.google.com/?q=Canon IT Nishi Tokyo Data Center, 3-5-33 Mukodai-cho, Nishi Tokyo-city, Tokyo, Japan 188-0013
+
+https://maps.google.com/?q=Amazon Asia-Pacific Resources Pte Ltd, C/O Equinix Pacific Pte Ltd (SIN2), 15 Pioneer Walk, Level 4 Singapore 627753
+
+https://maps.google.com/?q=Amazon Asia-Pacific Resources Pte Ltd, C/O Keppel Datahub Pte Ltd (SIN3), 25 Tampines Street 92. Singapore 528877
+
+https://maps.google.com/?q=Amazon Asia-Pacific Resources Pte Ltd, C/O Tata Communication International Pte Ltd (SIN4). 35 Tai Seng Street, Singapore 534103
+
+https://maps.google.com/?q=Amazon Asia-Pacific Resources Pte Ltd, C/O Tata Communication International Pte Ltd (SIN5), 2 Tai Seng Avenue, Singapore 534408
+
+https://maps.google.com/?q=C/O Equinix Pacific Pte Ltd (SIN50), 15 Pioneer Walk, Level 4, Singapore 627753
+
+https://maps.google.com/?q=Amazon Asia-Pacific Resources Pte Ltd, C/O Keppel Datahub Pte Ltd (SIN51), 27 Tampines Street 92, Singapore 528878
+
+https://maps.google.com/?q=C/O Equinix Australia, 47 Bourke Rd, Alexandria NSW 2015, Australia
+
+https://maps.google.com/?q=C/O Global Switch, 400 Harris St, Ultimo NSW 2007, Australia
+
+https://maps.google.com/?q=C/O Fujitsu Australia, 6 Bellevue Circuit, Pemulwuy NSW 2145, Australia
+
+https://maps.google.com/?q=1 William Dean Street, Eastern Creek NSW 2766, Australia
+
+https://maps.google.com/?q=42A Bluett Drive, Smeaton Grange, NSW 2567, Australia
+
+https://maps.google.com/?q=C/O Securus Australia, 5 Broadcast Way (South Gate), Artarmon NSW 2064, Australia
+
+https://maps.google.com/?q=C/O NextDC S1, 4 Eden Park Drive, Macquarie Park NSW 2113, Australia
+
+https://maps.google.com/?q=C/O Fujitsu Australia, 4 Figtree Drive, Homebush NSW 2127, Australia
+
+https://maps.google.com/?q=Avenida Ceci, 1900 CJ A - 1 Andar Condominio Walter Torre, Tambore Barueri / Sao Paulo BRAZIL, 06460-120
+
+https://maps.google.com/?q=Rua Guido Camargo Penteado Sobrinho, 3685, Barao Geraldo, 13082-800
+
+https://maps.google.com/?q= Rua Bento Branco de Andrade Filho, 621, Sao Paulo / Sao Paulo BRAZIL, 04757-000
+
+https://maps.google.com/?q=Rua Presbitero Plinio Alves de Souza, 757 - Medeiros, 13212-181
+
+https://maps.google.com/?q=Av Ceci - 1850 - Tambore, Barueri / Sao Paulo, 06.460-120
+
+https://maps.google.com/?q=Estrada dos Bandeirantes, 10916, Vargem Pequena Jacarepagu, Rio de Janeiro / Rio de Janeiro, 22783-111
