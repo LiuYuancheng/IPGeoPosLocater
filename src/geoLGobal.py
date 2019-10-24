@@ -19,8 +19,10 @@ APP_NAME = 'Web GeoLocation Finder'
 #------<IMAGES PATH>-------------------------------------------------------------
 ICO_PATH = "".join([dirpath, "\\img\\geoIcon.ico"])
 BGIMG_PATH = "".join([dirpath, "\\img\\background.jpg"])
+DC_POS_PATH = "".join([dirpath, "\\awsRecord.txt"])
 
 #-------<GLOBAL PARAMTERS>-----------------------------------------------------
 iCtrlPanel = None   # panel to do the control
 iMapPanel = None    # panel to display the google map.
 iGeoMgr = None      # program control manager.
+iDCPosMgr = None    # data ceter position manager.

@@ -21,6 +21,7 @@ from json import load
 from PIL import Image, ImageDraw
 
 import wx  # use wx to build the UI.
+from geopy.distance import geodesic
 
 import geoLGobal as gv
 import geoLPanel as gp
@@ -35,6 +36,7 @@ class GeoLFrame(wx.Frame):
         self.SetBackgroundColour(wx.Colour(200, 210, 200))
         self.SetIcon(wx.Icon(gv.ICO_PATH))
         gv.iGeoMgr = self.geoMgr = GeoMgr(self)
+        gv.iDCPosMgr = DataCenterMgr(self)
         self.SetSizer(self._buidUISizer())
 
 #--GeoLFrame-------------------------------------------------------------------
@@ -140,6 +142,36 @@ class GeoMgr(object):
             del buf
             buf = bitmap.ConvertToImage().GetData()
         return Image.frombuffer("RGB", size, buf, "raw", "RGB", 0, 1)
+
+
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+class DataCenterMgr(object):
+    """ Data center manager.
+    """
+    def __init__(self, parent):
+        self.parent = parent
+        self.centerDict = {} # data center dict
+        self.loadDCPos()
+
+#-----------------------------------------------------------------------------
+    def loadDCPos(self):
+        """ Load the data center position."""
+        with open(gv.DC_POS_PATH, 'r') as fh: 
+            for line in fh:
+                dcID, _, dcPos  = line.rstrip().split(';')
+                self.centerDict[dcID] = [float(i) for i in dcPos.split(',')]
+
+#-----------------------------------------------------------------------------
+    def fineNear(self, pos):
+        """ Return the nearest data ceter position and distance.
+        """
+        dcID, dist = None, 0
+        for key in self.centerDict.keys():
+            tmp = geodesic(pos, self.centerDict[key]).miles*1.60934  # mile to km
+            if dist == 0 or dist > tmp:
+                dcID, dist = key, tmp
+        return (dcID, dist)
 
 #-----------------------------------------------------------------------------
 #-----------------------------------------------------------------------------
