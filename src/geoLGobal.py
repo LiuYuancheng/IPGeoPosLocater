@@ -18,9 +18,9 @@ APP_NAME = 'Web GeoLocation Finder'
 
 #------<IMAGES PATH>-------------------------------------------------------------
 IMG_FD = 'img'
-ICO_PATH = "\\".join((dirpath, IMG_FD, "geoIcon.ico"))
-BGIMG_PATH = "\\".join((dirpath, IMG_FD, "background.jpg"))
-DC_POS_PATH = "\\".join((dirpath, "awsRecord.txt"))
+ICO_PATH = os.path.join(dirpath, IMG_FD, "geoIcon.ico")
+BGIMG_PATH = os.path.join(dirpath, IMG_FD, "background.jpg")
+DC_POS_PATH = os.path.join(dirpath, "awsRecord.txt")
 
 #-------<GLOBAL PARAMTERS>-----------------------------------------------------
 iCtrlPanel = None   # panel to do the control
