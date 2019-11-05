@@ -17,9 +17,10 @@ print("Current working directory is : %s" % dirpath)
 APP_NAME = 'Web GeoLocation Finder'
 
 #------<IMAGES PATH>-------------------------------------------------------------
-ICO_PATH = "".join([dirpath, "\\img\\geoIcon.ico"])
-BGIMG_PATH = "".join([dirpath, "\\img\\background.jpg"])
-DC_POS_PATH = "".join([dirpath, "\\awsRecord.txt"])
+IMG_FD = 'img'
+ICO_PATH = "\\".join((dirpath, IMG_FD, "geoIcon.ico"))
+BGIMG_PATH = "\\".join((dirpath, IMG_FD, "background.jpg"))
+DC_POS_PATH = "\\".join((dirpath, "awsRecord.txt"))
 
 #-------<GLOBAL PARAMTERS>-----------------------------------------------------
 iCtrlPanel = None   # panel to do the control
