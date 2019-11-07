@@ -25,8 +25,7 @@ pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
 # printing number of pages in pdf file 
 print(pdfReader.numPages) 
   
-# creating a page object
-
+# creat the addresss record file.
 checkSumfh = open("address.txt", 'a')
 
 # Split 
@@ -41,19 +40,14 @@ for i in range(3):
             if str(data[2]).isupper():
                 servKey.append(data[2])
 
-
-
 addressList = []
 addressStr = ''
 serchIdx = 0
 startFlg = False
-
-
 for i in range(20):
     pageObj = pdfReader.getPage(i)
     for line in pageObj.extractText().split('\n'):
         checkSumfh.write(line+ "\n")
-
 checkSumfh.close()
 
 #print(servKey)
@@ -79,7 +73,6 @@ for i in range(2, 20):
                 addressStr = ''
                 startFlg = True
                 addressStr += line
-
             if startFlg:
                 addressStr += line
         else:
