@@ -91,7 +91,7 @@ class PanelCtrl(wx.Panel):
         hbox0.Add(wx.StaticText(
             self, label="Map ZoomIn Level : ".ljust(20)), flag=flagsR, border=2)
         self.zoomInCB = wx.ComboBox(
-            self, -1, choices=[str(i) for i in range(10, 15)], size=(60, 22), style=wx.CB_READONLY)
+            self, -1, choices=[str(i) for i in range(10, 19)], size=(60, 22), style=wx.CB_READONLY)
         self.zoomInCB.SetSelection(3)
         hbox0.Add(self.zoomInCB, flag=flagsR, border=2)
         ctSizer.Add(hbox0, flag=flagsR, border=2)
