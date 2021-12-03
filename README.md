@@ -45,13 +45,13 @@ pip install -U wxPython
 
 ​	link: https://wxpython.org/pages/downloads/index.html
 
-1. pygeo : `pip install geopy`
+2. pygeo : `pip install geopy`
 
-   link: https://pypi.org/project/geopy/
+link: https://pypi.org/project/geopy/
 
-2. API to check IPv4 Address GPS/GeoLocation position: https://ipinfo.io/ (no need to install)
+3. API to check IPv4 Address GPS/GeoLocation position: https://ipinfo.io/ (no need to install)
 
-3. API to open browser and mark the position on Google map.(Google Chrome installed)
+4. API to open browser and mark the position on Google map.(Google Chrome installed)
 
 ###### Hardware Needed : None
 
