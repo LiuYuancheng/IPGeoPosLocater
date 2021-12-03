@@ -20,7 +20,7 @@ IAD24;7610 Mason King Ct. Manassas, VA 20109;38.7911269,-77.5417733
 IAD32;1304 Squire Ct. Sterling, VA 20166;39.0216077,-77.4369764
 IAD50;21271 Smith Switch Rd. Ashburn, VA 20147;39.0273261,-77.4594538
 IAD51;Prologis building #9, 45220 Prologis Plaza, Sterling, VA 20166;38.9914781,-77.4388012
-IAD52;11800 Brewers Spring Rd. Manassas, VA 20109;38.6806462,-77.4321358,17
+IAD52;11800 Brewers Spring Rd. Manassas, VA 20109;38.6806462,-77.4321358
 IAD53;12100 Sunrise Valley Dr. Reston, VA 20191;38.9506292,-77.3667527
 IAD54;43791 Devin Shafron Dr. Ashburn, VA 20147;39.003285,-77.4894027
 IAD55;15395 John Marshall Hwy, Haymarket, VA 20169;38.815228,-77.6505377
@@ -79,7 +79,7 @@ BJS 11;Amazon, Guanghuan Cloud Valley, Chuangyigu Rd, Yanshun Rd,Yanjiao, Langfa
 BJS 12;Xinghaist. 1 , South District, Beijing Economic-Technological Development Area, Beijing, China, 100176;39.9375346,115.837023
 BJS20;1 Lou Zhuang Road, Langfang, Hebei province, China;39.5258632,116.7546468
 ZHY53/BJS21;No.2, East Central Avenue, Shapotou DistrictZhongwei,NingxiaChina;37.5241541,104.9835208
-PEK4;Level P3, Tower E1, The Towers, Oriental Plaza, No1,East Chang'An Ave.Dong Cheng District, Beijing, 100738 China;39.909544,116.4123433,17
+PEK4;Level P3, Tower E1, The Towers, Oriental Plaza, No1,East Chang'An Ave.Dong Cheng District, Beijing, 100738 China;39.909544,116.4123433
 PEK7;6th Floor, Dexin Building, A10 JiuXianQiao North Road, Chaoyang District, Beijing, 100015, China;39.982055,116.5049687
 PEK50;Amazon, Guanghuan Cloud Valley, Chuangyigu Rd, Yanshun Rd,Yanjiao, Langfang, Hebei, 065201, China;39.9732992,116.7736253
 NRT4;Equinix Systems KK, TY2 IBX Center, 3-8-21 Higashi Shinagawa, Shinagawa-ku, Tokyo, Japan  104-002;35.617458,139.7458683
@@ -108,7 +108,7 @@ SYD61;C/O NextDC S1, 4 Eden Park Drive, Macquarie Park NSW 2113, Australia;-33.7
 SYD7;C/O Fujitsu Australia, 4 Figtree Drive, Homebush NSW 2127, Australia;-33.8497428,151.0694204
 GRU1;Avenida Ceci, 1900 CJ A - 1 Andar Condominio Walter Torre, Tambore Barueri / Sao Paulo BRAZIL, 06460-120;-23.4949839,-46.8164453
 GRU2;Rua Guido Camargo Penteado Sobrinho, 3685, Barao Geraldo, 13082-800;-22.8208252,-47.1020552
-GRU3; Rua Bento Branco de Andrade Filho, 621, Sao Paulo / Sao Paulo BRAZIL, 04757-000;-23.6504879,-46.7230545,17
+GRU3; Rua Bento Branco de Andrade Filho, 621, Sao Paulo / Sao Paulo BRAZIL, 04757-000;-23.6504879,-46.7230545
 GRU4;Rua Presbitero Plinio Alves de Souza, 757 - Medeiros, 13212-181;-23.191744,-46.9767932
 GRU50;Av Ceci - 1850 - Tambore, Barueri / Sao Paulo, 06.460-120;-23.4949696,-46.8134941
 GIG50;Estrada dos Bandeirantes, 10916, Vargem Pequena Jacarepagu, Rio de Janeiro / Rio de Janeiro, 22783-111;-22.9854491,-43.4334929

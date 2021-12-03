@@ -2,22 +2,22 @@
 #-----------------------------------------------------------------------------
 # Name:        geoLRun.py
 #
-# Purpose:     This module is used to convert a url to the IP address then 
-#              find the GPS position it and draw it on the google map.
+# Purpose:     This module is used to convert a url to the IP address, then 
+#              find the IP's GPS position and mark it on the google map.
 #
 # Author:      Yuancheng Liu
 #
 # Created:     2019/10/14
+# version:     v_0.1
 # Copyright:   YC @ Singtel Cyber Security Research & Development Laboratory
 # License:     YC
 #-----------------------------------------------------------------------------
-import os, sys
-import time
+import os
 import math
 import socket
 import urllib.request
-from urllib.request import urlopen
 from json import load
+from urllib.request import urlopen
 from PIL import Image, ImageDraw
 
 import wx  # use wx to build the UI.
@@ -42,7 +42,7 @@ class GeoLFrame(wx.Frame):
 #--GeoLFrame-------------------------------------------------------------------
     def _buidUISizer(self):
         """ Build the main UI Sizer. """
-        flagsR = wx.RIGHT | wx.ALIGN_CENTER_VERTICAL
+        flagsR = wx.RIGHT | wx.CENTER # | wx.ALIGN_CENTER_VERTICAL # new wx removed the ALIGN_CENTER_VERTICAL flag
         mSizer = wx.BoxSizer(wx.HORIZONTAL)
         mSizer.AddSpacer(5)
         gv.iMapPanel = self.mapPanel = gp.PanelMap(self)
@@ -78,15 +78,17 @@ class GeoMgr(object):
             under float decimal format.
         """
         data, lat, lon = load(urlopen('https://ipinfo.io/' + str(ipaddr) + '/json')), 0, 0
-        for attr in data.keys():
+        print(data)
+        for key, val in data.items():
             if gv.iCtrlPanel:
-                gv.iCtrlPanel.updateDetail(str(attr).ljust(13)+data[attr])
-            if attr == 'loc': (lat, lon) = data[attr].split(',')
+                if isinstance(val, str):
+                    gv.iCtrlPanel.updateDetail(str(key).ljust(13)+val)
+            if key == 'loc': (lat, lon) = data[key].split(',')
         return (float(lat), float(lon))
 
 #--GeoMgr----------------------------------------------------------------------
     def urlToIp(self, url):
-        """ Convert the URL to ip address."""
+        """ Convert the URL to IP address."""
         return str(socket.gethostbyname(url))
 
 #--GeoMgr----------------------------------------------------------------------
@@ -129,7 +131,7 @@ class GeoMgr(object):
     def PIL2wx(self, image):
         """ Convert the PIL image to wx bitmap."""
         width, height = image.size
-        return wx.BitmapFromBuffer(width, height, image.tobytes())
+        return wx.Bitmap.FromBuffer(width, height, image.tobytes())
 
 #--GeoMgr----------------------------------------------------------------------
     def wx2PIL(self, bitmap):
@@ -147,7 +149,8 @@ class GeoMgr(object):
 #-----------------------------------------------------------------------------
 #-----------------------------------------------------------------------------
 class DataCenterMgr(object):
-    """ Data center manager.
+    """ Data center manager. Used to find the nearest AWS data center with the 
+        given position.
     """
     def __init__(self, parent):
         self.parent = parent
@@ -164,11 +167,13 @@ class DataCenterMgr(object):
 
 #-----------------------------------------------------------------------------
     def fineNear(self, pos):
-        """ Return the nearest data ceter position and distance.
+        """ Return the nearest AWS data ceter position and distance.
         """
         dcID, dist = None, 0
         for key in self.centerDict.keys():
-            tmp = geodesic(pos, self.centerDict[key]).miles*1.60934  # mile to km
+
+            if(len(self.centerDict[key])>2): self.centerDict[key] = tuple(self.centerDict[key][:1])
+            tmp = geodesic(pos, tuple(self.centerDict[key])).km #miles*1.60934  # mile to km
             if dist == 0 or dist > tmp:
                 dcID, dist = key, tmp
         return (dcID, dist)

@@ -1,12 +1,8 @@
 #!/usr/bin/python
 #-----------------------------------------------------------------------------
-# Name:        geoLRun.py
+# Name:        pdftxtExtrack.py
 #
-# Purpose:     This module is used PyPDF to convert a url to the IP address then 
-#              find the GPS position it and draw it on the google map.
-#              link: https://www.geeksforgeeks.org/working-with-pdf-files-in-python/
-#
-# Author:      Yuancheng Liu
+# Purpose:     This module is used PyPDF to convert a pdf file to a txt file.
 #
 # Created:     2019/10/14
 # Copyright:   YC @ Singtel Cyber Security Research & Development Laboratory

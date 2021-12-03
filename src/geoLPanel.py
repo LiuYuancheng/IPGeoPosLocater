@@ -1,12 +1,13 @@
 #!/usr/bin/python
 #-----------------------------------------------------------------------------
-# Name:        TelloPanel.py
+# Name:        getLPanel.py
 #
 # Purpose:     This module is used to create the control or display panel for
 #              ip geolocation system.
 # Author:      Yuancheng Liu
 #
 # Created:     2019/10/14
+# version:     v_0.1
 # Copyright:   YC @ Singtel Cyber Security Research & Development Laboratory
 # License:     YC
 #-----------------------------------------------------------------------------
@@ -29,7 +30,7 @@ class PanelMap(wx.Panel):
 
 #--PanelMap--------------------------------------------------------------------
     def onPaint(self, evt):
-        """ Draw the map bitmap and mark the gps position."""
+        """ Draw the map bitmap and mark the center position."""
         dc = wx.PaintDC(self)
         l, (w, h) = 8, self.panelSize  # set the bm size and the marker size.
         dc.DrawBitmap(self._scaleBitmap(self.bmp, w, h), 0, 0)
@@ -76,7 +77,7 @@ class PanelCtrl(wx.Panel):
 #--PanelCtrl-------------------------------------------------------------------
     def _buidUISizer(self):
         """ build the control panel sizer. """
-        flagsR = wx.RIGHT | wx.ALIGN_CENTER_VERTICAL
+        flagsR = wx.RIGHT | wx.CENTER # wx.ALIGN_CENTER_VERTICAL
         ctSizer = wx.BoxSizer(wx.VERTICAL)
         hbox0 = wx.BoxSizer(wx.HORIZONTAL)
         ctSizer.AddSpacer(5)

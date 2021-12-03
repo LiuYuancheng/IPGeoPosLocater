@@ -12,9 +12,10 @@
 #-----------------------------------------------------------------------------
 import os
 
-dirpath = os.getcwd()
-print("Current working directory is : %s" % dirpath)
-APP_NAME = 'Web GeoLocation Finder'
+print("Current working directory is : %s" % os.getcwd())
+dirpath = os.path.dirname(__file__)
+print("Current source code location : %s" % dirpath)
+APP_NAME = 'Web GeoLocation Finder_v0.1'
 
 #------<IMAGES PATH>-------------------------------------------------------------
 IMG_FD = 'img'
